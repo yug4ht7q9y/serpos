@@ -1,16 +1,5 @@
-language: minimal
-
-# Meminta mesin large (4 core) sesuai permintaan Anda
-os: linux
-dist: jammy
-vm:
-  size: large
-
 script:
-  - echo "===== INFORMASI MESIN (LARGE) ====="
-  - echo "--- Jumlah Core (nproc) ---"
+  - echo "Jumlah core yang tersedia:"
   - nproc
-  - echo "--- Detail CPU (lscpu) ---"
-  - lscpu | grep -E "^CPU\(s\)|^Thread|^Core|^Socket"
-  - echo "--- Memori (free) ---"
-  - free -h
+  - echo "Detail CPU:"
+  - lscpu | grep -E "^CPU\(s\)|^Core|^Socket"
